@@ -1,10 +1,13 @@
 
 # Myall Project
 
+
+![Screen](myall_icons/logo.png)
+
 ## Description
 This application is used to quickly create alphabetical lists with letter headers. All you need to do is to upload a file in TXT format, in which terms are written in one column. You can edit your TXT file here, set your own sort order and exclude characters that will not appear in headers.
 
-![Image](images/screen.png)
+![Screen](images/screen.png)
 
 ## Features
 - **Interactive Lists**: Manage and display lists dynamically.
