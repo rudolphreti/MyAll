@@ -1,0 +1,47 @@
+#second-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#second-nav div {
+    display: flex;
+    padding: 0px 15px;
+    border-right: 1px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+#about {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#about img {
+    width: 50%;
+    margin: 30px 0 40px 0;
+}
+
+#about h3 {
+    margin-top: 0;
+}
+
+#contact {
+    text-align: center;
+}
+
+#sideNav-second-container {
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 400px) {
+    #second-nav div {
+        font-size: 3vw;
+        padding: 0px 10px;
+    }
+}

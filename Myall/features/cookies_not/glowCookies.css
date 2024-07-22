@@ -1,0 +1,112 @@
+.banner {
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    margin: 10px 10px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    box-shadow: unset;
+    border-radius: unset;
+    box-sizing: unset;
+    margin: 0;
+    -webkit-box-shadow: -3px -6px 41px 3px #000000;
+    box-shadow: -3px -6px 41px 3px #000000;
+}
+
+.banner-left {
+    left: 0;
+}
+
+.banner-right {
+    right: 0;
+}
+
+.cookie-consent-banner__inner {
+    padding: 15px 0;
+}
+
+.cookie-consent-banner__description {
+    font-weight: normal;
+    font-size: 0.9em;
+    margin: 3px 20px 20px 20px;
+}
+
+.cookie-consent-btn {
+    display: inline-block;
+    width: 64%;
+    padding: 11px 13px;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.8em;
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    transition: 0.4s;
+}
+
+.cookie-consent-btn:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.cookie-consent-btn-secondary {
+    display: inline-block;
+    padding: 11px 13px;
+    width: 33%;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.8em;
+    margin-left: 0.2em;
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+    transition: 0.3s;
+}
+
+.cookie-consent-btn-secondary:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.prebanner {
+    position: fixed;
+    bottom: 0;
+    z-index: 2147483645;
+    height: 50px;
+    font-size: 0.9em;
+    margin: 10px 10px;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    -webkit-box-shadow: 10px 10px 36px -13px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 10px 10px 36px -13px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 36px -13px rgba(0, 0, 0, 0.15);
+}
+
+.prebanner-left {
+    left: 0;
+}
+
+.prebanner-right {
+    right: 0;
+}
+
+.prebanner:hover {
+    text-decoration: none;
+}
+
+.link-btn {
+    text-decoration: underline;
+    border: none;
+    background-color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}

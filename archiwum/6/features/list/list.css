@@ -1,0 +1,87 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul ul {
+    list-style-type: disc;
+    margin-left: 22px;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+#alphabet {
+    background-color: green;
+    text-align: center;
+    margin: 0px;
+    padding: 7px 15px 0px 15px;
+    display: none;
+    border-radius: 10px;
+}
+
+#alphabet h3 {
+    margin-right: 10px;
+}
+
+#alphabet li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.terms {
+    columns: 200px;
+}
+
+.terms h3 {
+    background-color: green;
+    padding: 2px 0px 2px 8px;
+    border-radius: 10px;
+}
+
+#alphabet a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#alphabet a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#alphabet a:hover {
+    color: green;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#alphabet a:active {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.no-break-div {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+#list-from-txt {
+    display: none;
+    margin: 70px 25px 0 25px;
+}

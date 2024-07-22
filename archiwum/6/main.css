@@ -1,0 +1,101 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#background-logo-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+}
+
+#background-logo {
+    width: 50%;
+    height: 50%;
+    background-image: url('myall_icons/logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/*icon bar*/
+
+#icon-bar {
+    width: 100%;
+    height: 45px;
+    background-color: #2e2e2e;
+    display: flex;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#right-icons {
+    right: 0;
+    cursor: pointer;
+}
+
+#left-icons {
+    left: 0;
+}
+
+.icons-container {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+}
+
+#icon-bar-logo {
+    align-items: center;
+    display: flex;
+}
+
+#left-icons img {
+    height: 30px;
+    margin-top: 7px;
+}
+
+.icons-container img {
+    height: 24px;
+    margin: 0 10px 0 0;
+}
+
+#sidenav-openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    left: 8px;
+    margin: 0 23px 4px 0;
+}
+
+@media screen and (max-width: 992px) {
+    #fullscreen-icon {
+        display: none;
+    }
+}

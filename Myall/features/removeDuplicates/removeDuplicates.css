@@ -1,0 +1,30 @@
+#remove-duplicates-message {
+    margin-top: 15px;
+    background-color: green;
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+    font-size: 10px;
+    font-size: 12px;
+    line-height: 1;
+}
+
+#remove-duplicates-message ul {
+    margin-top: 0px;
+}
+
+#remove-duplicates-message li {
+    margin-bottom: 0px;
+}
+
+#remove-duplicates-message-closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#remove-duplicates-message-container {
+    position: relative;
+    display: none;
+}

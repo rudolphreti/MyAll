@@ -1,0 +1,182 @@
+<!--Wszystkie eventy do addEventListener w konkretnych feature'ach-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Myall - My Alphabetical List</title>
+    <meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport">
+    <meta name="author" content="Mikołaj Kosmalski">
+    <meta name="publisher" content="Mikołaj Kosmalski">
+    <meta name="copyright" content="Mikołaj Kosmalski">
+    <meta name="description" content="This application is used to quickly create alphabetical lists. All you need to do is to load a file in TXT format, in which terms are written in one column. You can set your own sort order and exclude characters that will not appear in headers. ">
+    <meta name="keywords" content="'alphabetical list', 'txt list', 'alphabetical list from txt', list, 'text, list', 'automatic', 'alphabetical list', 'alphabetical list generator', 'alphabetical list generator online', 'free alphabetical list generator online', 'alphabetical list lika book index'">
+    <meta name="page-topic" content="Alphabetical List">
+    <meta name="page-type" content="Web-Application">
+    <meta name="audience" content="Everyone">
+    <meta http-equiv="content-language" content="en">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://myall.freuciv.com/">
+    <meta property="og:title" content="Myall - My Alphabetical List">
+    <meta property="og:description" content="This application is used to quickly create alphabetical lists. All you need to do is to load a file in TXT format, in which terms are written in one column. You can set your own sort order and exclude characters that will not appear in headers. ">
+    <meta property="og:image" content="http://myall.freuciv.com/myall_icons/logo-metathumb.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://myall.freuciv.com/">
+    <meta property="twitter:title" content="Myall - My Alphabetical List">
+    <meta property="twitter:description" content="This application is used to quickly create alphabetical lists. All you need to do is to load a file in TXT format, in which terms are written in one column. You can set your own sort order and exclude characters that will not appear in headers. ">
+    <meta property="twitter:image" content="http://myall.freuciv.com/myall_icons/logo-metathumb.png">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <section id="styles">
+        <link href="main.css" rel="stylesheet">
+        <link href="features/sideNav/sideNav.css" rel="stylesheet">
+        <link href="features/list/list.css" rel="stylesheet">
+        <link href="features/sideNav/secondNav.css" rel="stylesheet">
+        <link href="features/cookie/glowCookies.css" rel="stylesheet">
+    </section>
+    <link href="myall_icons/favicon.png" rel="icon" type="image/png">
+</head>
+
+<body>
+    <div id="background-logo-container">
+        <div id="background-logo"></div>
+    </div>
+    <div id="icon-bar">
+        <div class="icons-container" id="left-icons">
+            <div id="sidenav-openbtn">&#9776</div>
+            <div id="icon-bar-logo">
+                <a href="index.html">
+                    <img src="myall_icons/logo.svg">
+                </a>
+            </div>
+        </div>
+        <div class="icons-container" id="right-icons">
+            <img id="fullscreen-icon" src="myall_icons/expand.png">
+        </div>
+    </div>
+    <ul id="list-from-txt" class="terms"></ul>
+    <div class="sidenav" id="mySidenav">
+        <div id="sidenav-container">
+            <a class="closebtn" href="javascript:void(0)" id="sidenav-closebtn">
+                    &times;
+                </a>
+            <div class="sidebar-div">
+                <div id="second-nav">
+                    <div style="border-left: 1px solid white;" id="second-nav-main-btn">
+                        Main
+                    </div>
+                    <div id="about-btn">
+                        About
+                    </div>
+                    <div id="contact-btn">
+                        Contact
+                    </div>
+                    <div id="gdpr-btn">
+                        GDPR
+                    </div>
+                </div>
+            </div>
+            <div id="sideNav-second-container">
+                <div class="sidebar-div">
+                    <ul id="alphabet" class="terms-nav"></ul>
+                    <hr>
+                </div>
+                <div id="about" class="flex-direction-column">
+                    <div class="sidebar-div">
+                        <img src="myall_icons/logo.svg">
+                    </div>
+                    <div class="sidebar-div">
+                        <h3>My Alphabetical List</h3>
+                        <p>Copyright © 2021</p>
+                        <p>Mikołaj Kosmalski</p>
+                        <a href="https://www.freuciv.com/">Visit freuciv.com</a>
+                    </div>
+                </div>
+                <div id="second-nav-main" class="flex-direction-column">
+                    <div class="sidebar-div" id="description">
+                        <p>
+                            This application is used to quickly create alphabetical lists with letter headers. All you need to do is to upload a file in TXT format, in which terms are written in one column. You can edit your TXT file here, set your own sort order and exclude characters
+                            that will not appear in headers.
+                        </p>
+                        <button onclick="viewExample('lists/lista.txt')">Show an example</button>
+                    </div>
+                    <hr>
+                    <div class="sidebar-div">
+                        <h3>Upload txt-list</h3>
+                    </div>
+                    <!-- Presets -->
+                    <!-- history.pushState(null, "page 2", '/.html'); -->
+                    <div class="sidebar-div">
+                        <input id="browse" type="file">
+                    </div>
+                    <hr>
+                    <div class="sidebar-div">
+                        <h3>Edit and save</h3>
+                    </div>
+                    <div class="sidebar-div">
+                        <div>
+                            <textarea id="txt-edit-area" cols="30" rows="20" placeholder="text will appear here" class="margin-bottom"></textarea>
+                        </div>
+                    </div>
+                    <div class="sidebar-div">
+                        <button id="txt-edit-button">Generate the alphabetical list</button>
+                        <button id="save-list">Save...</button>
+                    </div>
+                    <hr>
+                    <div class="sidebar-div">
+                        <h3>Sorting order</h3>
+                    </div>
+                    <div class="sidebar-div">
+                        <input id="alphabet-input" type="text" value="-0123456789aäąbcćdeęfghijklłmnńoóöprsßśtuüvwyzźż">
+                    </div>
+                    <div class="sidebar-div">
+                        <button onclick="alphabetInputDefValueFn()">Default</button>
+                    </div>
+                    <hr>
+                    <div class="sidebar-div">
+                        <h3>Exclude chars</h3>
+                    </div>
+                    <div class="sidebar-div">
+                        <input id="exclude-input" type="text" value="-0123456789ąęńß">
+                    </div>
+                    <div class="sidebar-div">
+                        <button onclick="excludeInputDefValueFn()">Default</button>
+                    </div>
+                </div>
+                <div id="contact" class="flex-direction-column">
+                    <ul>
+                        <li>
+                            E-mail: mikolaj.kosmalski[at]freuciv.com
+                        </li>
+                        <li>
+                            Website:
+                            <a href="https://www.freuciv.com/">freuciv.com</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/freucivcom-107514480946858/">freuciv.com FB-Website</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="gdpr" class="flex-direction-column"></div>
+            </div>
+        </div>
+    </div>
+    <section id="js-scripts">
+        <section id="features-js">
+            <script src="https://unpkg.com/swipe-listener@1.2.0/dist/swipe-listener.min.js" type="text/javascript"></script>
+            <script src="features/list/list.js"></script>
+            <script src="features/hideIfIdle.js"></script>
+            <script src="features/fullscreen.js"></script>
+            <script src="features/sideNav/sideNav.js"></script>
+            <script src="features/examples/examples.js"></script>
+            <script src="features/save.js"></script>
+            <script src="features/sideNav/secondNav.js"></script>
+            <script src="features/sideNav/gdpr.js"></script>
+            <script src="features/cookie/glowCookies.js"></script>
+        </section>
+    </section>
+</body>
+
+</html>
