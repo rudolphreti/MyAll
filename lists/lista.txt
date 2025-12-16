@@ -48,7 +48,6 @@ Kohärenz
 Logik
 Gerechtigkeit
 Respekt
-Fürsorge
 Transparenz
 Ehrlichkeit
 Achtsamkeit
@@ -67,3 +66,4 @@ Einfachheit
 Frieden
 Nützlichkeit
 Fürsorglichkeit
+Gut
