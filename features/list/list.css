@@ -85,3 +85,60 @@ ul li {
     display: none;
     margin: 70px 25px 0 25px;
 }
+
+    @media print {
+        * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            color: #000;
+            background: #fff;
+        }
+
+    #icon-bar,
+    #mySidenav,
+    #background-logo-container {
+        display: none !important;
+    }
+
+    #list-from-txt {
+        margin: 0;
+    }
+
+        #alphabet {
+            display: block;
+            background-color: green;
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px 15px 5px 15px;
+        }
+
+    #alphabet li {
+        margin-right: 8px;
+    }
+
+        #alphabet a {
+            color: #fff !important;
+            background-color: green !important;
+            border-radius: 6px;
+            padding: 6px 8px;
+        }
+
+    .terms {
+        color: #000;
+    }
+
+        .terms h3 {
+            background-color: green !important;
+            color: #fff !important;
+            padding: 6px 10px 6px 12px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+    .terms li {
+        color: #000;
+    }
+}
