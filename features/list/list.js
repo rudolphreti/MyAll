@@ -8,7 +8,28 @@ const bgLogoContainer = document.getElementById('background-logo-container');
 const txtEditBtn = document.getElementById('txt-edit-button');
 const input = document.getElementById('browse');
 const textarea = document.getElementById('txt-edit-area');
+const lineSpacingInput = document.getElementById('line-spacing-input');
+const fontSizeInput = document.getElementById('font-size-input');
+
+const defaultLineSpacing = 15;
+const defaultFontSize = 16;
 let alphabet = alphabetInput.value;
+
+const setLineSpacing = (spacing) => {
+    const parsedSpacing = Number(spacing);
+    const safeSpacing = Number.isNaN(parsedSpacing)
+        ? defaultLineSpacing
+        : Math.max(0, parsedSpacing);
+    document.documentElement.style.setProperty('--terms-gap', `${safeSpacing}px`);
+};
+
+const setFontSize = (fontSize) => {
+    const parsedFontSize = Number(fontSize);
+    const safeFontSize = Number.isNaN(parsedFontSize)
+        ? defaultFontSize
+        : Math.max(1, parsedFontSize);
+    document.documentElement.style.setProperty('--terms-font-size', `${safeFontSize}px`);
+};
 
 listReader = () => {
     const files = input.files;
@@ -126,5 +147,11 @@ txtEditBtn.addEventListener('click', () => {
         displayList();
     }
 });
+
+lineSpacingInput.addEventListener('input', () => setLineSpacing(lineSpacingInput.value));
+fontSizeInput.addEventListener('input', () => setFontSize(fontSizeInput.value));
+
+setLineSpacing(lineSpacingInput.value);
+setFontSize(fontSizeInput.value);
 
 input.addEventListener('change', listReader);
